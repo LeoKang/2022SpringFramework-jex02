@@ -19,7 +19,7 @@ public class RootConfig {
 
 	@Bean
 	public DataSource dataSource() {
-		HikariConfig hikariConfig = new HikariConfig();
+		HikariConfig hikariConfig = new HikariDataSource();
 		hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
 		hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:xe");
 		
