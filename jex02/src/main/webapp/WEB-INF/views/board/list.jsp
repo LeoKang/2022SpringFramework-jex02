@@ -9,6 +9,7 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">Board List Page</div>
+			<button id='regBtn' type="button" class="btn btn-xs pull-right">Register New Board</button>
 			<div class="panel-body">
 				<table class="table table-striped table-bordered table-hover">
 					<thead>
@@ -72,6 +73,10 @@
 			}
 			$("#myModal").modal("show");
 		}
+		
+		$("#regBtn").on("click", function() {
+			self.location = "/board/register";
+		});
 	});
 </script>
 
